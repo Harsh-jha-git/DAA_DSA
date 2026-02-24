@@ -1,0 +1,23 @@
+Keeping track of my progress in DSA. (Strivers + Leetcode + Codeforces)
+
+Structure followed:
+
+Problem 1:
+    |
+    L-----> Problem Statement
+    L-----> Algorithm 1
+            |
+            L-----> Logic & Code
+            L-----> Time & Space complexities
+            L-----> Advantages / Disadvantages
+
+    |
+    L-----> Algorithm 2
+    .
+    .
+    .
+
+Problem 2:
+.
+.
+.
