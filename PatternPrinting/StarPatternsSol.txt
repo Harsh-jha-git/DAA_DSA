@@ -1,0 +1,86 @@
+For all pattern printing problems (PP Problems, lol), have one variable for the rows and the other for columns.
+Then observe how one variable depends on the other, how it changes with change in the first one.
+For empty spaces, you may require a new variable, and also observe how it changes with change in the first variable.
+So, for convention, I use i for rows and j for columns. 
+
+1.
+****
+****
+****
+****
+
+In this, i varies from 1 to 4(0-3, inclusive of both). j also varies from 1 to 4(4 rows and 4 columns). j doesn't depend on i. 
+for i -> 0 to 3 do
+    for j-> 0 to 3 do
+        print -> "*"
+    newline
+
+2.
+*
+**
+***
+****
+*****
+
+i varies from 1 to 5 (0 to 4, both inclusive) and so does j. But here, when i is 1(0), j ranges from 0 to 1, when i is 2(1), j is 0 to 2 and so on.
+So j for ith row is 0 to i+1.
+for i -> 0 to 4 do
+    for j -> 0 to i+1 do
+        print -> "*"
+    newline
+
+3. is just the range reversing.
+
+4.
+    *
+   ***
+  *****
+ *******
+*********
+
+i varies from 1 to 5(0 to 4, both inclusive). j varies from 1 to 9, with difference being odd natural nos., i.e. 
+ith row has 1 to ith odd number. (2*i+1). The spaces decrease from 5 to 0.
+for i -> 0 to 4 do
+    spaces -> 5 to 0
+    print -> spaces
+    for j -> 0 to 2*i+1, j++ do
+        print -> "*"
+    newline
+
+5. is also the range just reversing.
+
+6.
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+i varies from 1 to 11 (0 to 10 inclusive). j ranges from 1 to 5 and then 5 to 1. So when i <= 5, j = 1 to i+1, when i > 5, j = 10-i+1 to 1
+for i -> 0 to 10 do
+    if i <=5 do 
+        for j -> 0 to i+1 do 
+            print -> "*"
+        newline
+    else do 
+        for j -> 10-i+1 to 0 do
+            print -> "*"
+        newline
+
+7.
+****
+*  *
+*  *
+****
+i varies from 1 to 4 (0 - 3 inclusive). When i = 0, or i = n-1, all stars are printed, else only first and last star is printed (j=0 or j=n-1)
+for i -> 0 to 4 do 
+    for j -> 0 to 4 do
+        if i = 0 or 3 or j = 0 or j =3
+        print -> "*"
+        else
+        print " "
+        newline
+
