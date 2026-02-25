@@ -1,0 +1,21 @@
+Start from 2 to n
+On the first iteration, select 2 and remove all multiples of 2.
+On the second iteration, select 3 and remove its multiples.
+4 is not selected as it is removed.
+On the third iteration, 5 is selected and its multiples are removed.
+On the sqrt(n) iteration, all prime numbers from 2 to n will remain.
+
+for p -> 2 to n do
+    a[p] -> p
+    for p -> 2 to [sqrt(n)] do //floor value of sqrt of n
+        if a[p] != 0
+        j -> p*p
+        while j <= n do
+            a[j] -> 0
+            j -> j+p
+i -> 0
+for p -> 2 to n do
+    if a[p] != 0
+        l[i] -> a[p]
+        i -> i+1
+return l
